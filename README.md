@@ -25,3 +25,9 @@ node hello-world --help
 # ``` npm install csv --save ```
 
 # ``` node hello-world --list people.csv ```
+
+# Improving the output
+
+```bash
+npm install chalk --save
+```
