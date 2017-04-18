@@ -3,9 +3,25 @@
 # npm init
 
 # hello-world.js 
-``` console.log('hello world'); ```
+```javascript
+
+ console.log('hello world'); 
+
+ ```
 
 # Install commander
-``` npm install commander --save ```
+```bash
+npm install commander --save 
+```
 
-# node hello-world --list 'hello world'
+# 
+```bash
+node hello-world --list 'hello world' 
+node hello-world --version 
+node hello-world --help
+
+```
+
+# ``` npm install csv --save ```
+
+# ``` node hello-world --list people.csv ```
