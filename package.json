@@ -1,0 +1,11 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "A command line application with nodeJS",
+  "main": "hello-world.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Garcia Ortiz <garciaortizc@gmail.com>",
+  "license": "MIT"
+}
