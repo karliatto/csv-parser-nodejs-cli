@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 var program = require('commander');
 var csv = require('csv');
 var fs = require('fs');

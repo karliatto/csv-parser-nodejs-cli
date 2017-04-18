@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "A command line application with nodeJS",
   "main": "hello-world.js",
+  "bin": {
+    "hello-world": "./hello-world.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

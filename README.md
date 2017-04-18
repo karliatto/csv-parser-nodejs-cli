@@ -31,3 +31,14 @@ node hello-world --help
 ```bash
 npm install chalk --save
 ```
+
+# Finally doing a bash command
+add #!/usr/bin/env node to the js script
+
+```javascript 
+  "bin": {
+    "hello-world": "./hello-world.js"
+  }
+```
+
+npm install -g
