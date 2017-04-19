@@ -1,20 +1,35 @@
-# git init
+# A CLI with [nodeJS](https://nodejs.org/)
 
-# npm init
+## Create a git repository
 
-# hello-world.js 
+```bash
+git init
+```
+
+## Create a package.json file
+```bash
+npm init
+```
+## Create a new file: hello-world.js
 ```javascript
 
  console.log('hello world'); 
 
  ```
 
-# Install commander
+## Install [commanderjs](https://github.com/tj/commander.js)
 ```bash
 npm install commander --save 
 ```
+```javascript
+var program = require('commander');
 
-# 
+program
+  .version('0.0.1')
+  .option('-l, --list [list]', 'List of customers in CSV')
+  .parse(process.argv)
+```
+
 ```bash
 node hello-world --list 'hello world' 
 node hello-world --version 
@@ -22,17 +37,48 @@ node hello-world --help
 
 ```
 
-# ``` npm install csv --save ```
+## Install [csv](https://github.com/wdavidw/node-csv)
 
-# ``` node hello-world --list people.csv ```
+```bash
+npm install csv --save
+```
 
-# Improving the output
+```javascript
+var csv = require('csv');
+var fs = require('fs');
+
+var parse = csv.parse;
+var stream = fs.createReadStream(program.list)
+    .pipe(parse({ delimiter : ',' }));
+
+stream
+	.on('data', function (data) {
+		var firstname = data[0];
+		var lastname = data[1];
+		var email = data[2];
+		console.log(firstname, lastname, email);
+	})
+```
+
+```bash
+node hello-world --list people.csv
+```
+
+
+## Improving the output
 
 ```bash
 npm install chalk --save
 ```
 
-# Finally doing a bash command
+```javascript
+	.on('end', function() {
+		console.log(chalk.green('success'));
+	})
+```
+
+## Finally doing a bash command
+[Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
 add #!/usr/bin/env node to the js script
 
 ```javascript 
@@ -41,4 +87,6 @@ add #!/usr/bin/env node to the js script
   }
 ```
 
-npm install -g
+```bash
+sudo npm install -g
+```
