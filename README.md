@@ -37,7 +37,7 @@ node hello-world --help
 
 ```
 
-## Install [csv](https://github.com/wdavidw/node-csv)
+## Install [node-csv](https://github.com/wdavidw/node-csv)
 
 ```bash
 npm install csv --save
@@ -78,8 +78,11 @@ npm install chalk --save
 ```
 
 ## Finally doing a bash command
-[Shebang](https://en.wikipedia.org/wiki/Shebang_(Unix))
-add #!/usr/bin/env node to the js script
+[Shebang/Hasbang](https://en.wikipedia.org/wiki/Shebang_(Unix)) Under Unix-like operating systems, when a script with a shebang is run as a program.
+- Add shebang at the top of the file
+```
+#!/usr/bin/env node
+```
 
 ```javascript 
   "bin": {
